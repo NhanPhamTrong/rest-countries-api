@@ -14,7 +14,7 @@ export const DetailPage = (props) => {
                 <h1>{props.country.name.common}</h1>
                 <div>
                     <p><strong>Native Name: </strong>{props.country.name.nativeName !== undefined && Object.values(props.country.name.nativeName)[0].official}</p>
-                    <p><strong>Population: </strong>{props.country.population}</p>
+                    <p><strong>Population: </strong>{Number(props.country.population).toLocaleString()}</p>
                     <p><strong>Region: </strong>{props.country.region}</p>
                     <p><strong>Sub Region: </strong>{props.country.subregion}</p>
                     <p><strong>Capital: </strong>{props.country.capital !== undefined && props.country.capital.join(", ")}</p>

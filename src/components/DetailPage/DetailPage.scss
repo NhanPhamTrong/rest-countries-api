@@ -1,0 +1,100 @@
+@import "../../assets/global-styles/global-styles";
+
+main.detail-page {
+    min-height: 100vh;
+    padding: 5rem 2rem;
+    background: $light-background;
+    color: $on-light-surface;
+
+    .main-header {
+        .back-btn {
+            margin-bottom: 4rem;
+            padding: 0.5rem 1.5rem;
+            background: $light-surface;
+            box-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
+            color: $on-light-surface;
+
+            span {
+                margin-right: 0.25rem;
+            }
+        }
+    }
+
+    .main-container {
+        display: grid;
+        grid-row-gap: 1.75rem;
+
+        img {
+            width: 100%;
+        }
+
+        div {
+            line-height: 2rem;
+        }
+
+        div:nth-child(5) {
+            ul {
+                li {
+                    margin-right: 0.625rem;
+                    margin-bottom: 0.625rem;
+                    padding: 0.5rem;
+                    border-radius: 0.25rem;
+                    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+                    cursor: pointer;
+                    display: inline-block;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+main.detail-page.dark {
+    background: $dark-background;
+    color: $on-dark-surface;
+
+    .main-header {
+        .back-btn {
+            background: $dark-surface;
+            color: $on-dark-surface;
+        }
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    main.detail-page {
+        padding: 5rem;
+
+        .main-container {
+            grid-template-columns: 42.5% 22.5% 22.5%;
+            grid-column-gap: 5%;
+            align-items: center;
+
+            img {
+                grid-column: 1;
+                grid-row: 1/4;
+                align-self: flex-start;
+            }
+
+            h1 {
+                grid-column: 2;
+                grid-row: 1;
+            }
+
+            div:nth-child(3) {
+                grid-column: 2;
+                grid-row: 2;
+            }
+
+            div:nth-child(4) {
+                grid-column: 3;
+                grid-row: 2;
+            }
+
+            div:nth-child(5) {
+                grid-column: 2/4;
+                grid-row: 3;
+            }
+        }
+    }
+}

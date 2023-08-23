@@ -1,0 +1,38 @@
+@import "../../assets/global-styles/global-styles";
+
+header {
+    width: 100%;
+    padding: 1rem 2rem;
+    background: $light-surface;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 1);
+    color: $on-light-surface;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+
+    button {
+        color: $on-light-surface;
+
+        span {
+            margin-right: 0.5rem;
+        }
+    }
+}
+
+header.dark {
+    background: $dark-surface;
+    color: $on-dark-surface;
+
+    button {
+        color: $on-dark-surface;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    header {
+        padding: 1rem 5rem;
+    }
+}
